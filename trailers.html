@@ -1,0 +1,66 @@
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="abc.css" media="screen">
+</head>
+<body id="abcd">
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<div class="topnav">
+  <a class="active" href="home.html">Home</a>
+<a href="#contact">Contact</a>
+   <a href="#contact">Photos</a>
+  <a id="aa" href="login.html">Login</a>
+  <a id="ab" href="signup.html">Sign Up</a>
+
+</div>
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Movies</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+
+ 
+</div>
+
+
+<div class="trailer">
+ <a  href="https://youtu.be/KRKTAYDaHzw" target="_blank"><img src="moothon.jpg"/> </a>
+ <a  href="https://youtu.be/AST2-4db4ic" target="_blank"><img src="littlewomen.jpg"/></a>
+ <a  href="https://youtu.be/kGM4uYZzfu0" target="_blank"><img src="birdsofprey.jpg"/></a>
+ <a  href="https://youtu.be/GR-Ui8-V2M0" target="_blank"><img src="bigil.jpg"/></a>
+ <a  href="https://youtu.be/WHXxVmeGQUc" target="_blank"><img src="irishman.jpg"/></a>
+ <a  href="https://youtu.be/bwzLiQZDw2I" target="_blank"><img src="frozen.jpg"/></a>
+ <a  href="https://www.youtube.com/watch?v=Z12zJCpj95w" target="_blank"><img src="helen.jpg"/></a>
+ <a class="link" href="https://www.youtube.com/watch?v=FEf412bSPLsI" target="_blank"><img src="dolittle.jpg"/></a>
+</div>
+ <div class="bg-image3"></div> 
+ 
+    
+</body>
+</html>
