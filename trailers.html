@@ -1,30 +1,10 @@
 <html>
 <head>
+ 
  <link rel="stylesheet" type="text/css" href="abc.css" media="screen">
 </head>
 <body id="abcd">
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
 
 <div class="topnav">
   <a class="active" href="home.html">Home</a>
@@ -37,15 +17,12 @@ window.onclick = function(event) {
 
 
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Movies</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <button class="dropbtn">Movies</button>
+  <div class="dropdown-content">
+    <a href="trailers.html">Latest Trailers</a>
+    <a href="#">Upcoming Movies</a>
+    <a href="#">Top Rated Movies</a>
   </div>
-
-
- 
 </div>
 
 
@@ -59,7 +36,12 @@ window.onclick = function(event) {
  <a  href="https://www.youtube.com/watch?v=Z12zJCpj95w" target="_blank"><img src="helen.jpg"/></a>
  <a class="link" href="https://www.youtube.com/watch?v=FEf412bSPLsI" target="_blank"><img src="dolittle.jpg"/></a>
 </div>
- <div class="bg-image3"></div> 
+ 
+<div class="bg-image3">
+</div>
+
+
+ 
  
     
 </body>
