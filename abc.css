@@ -60,7 +60,7 @@ body, html {
 
   
   
-  height:100%;
+  height:150%;
 
  
   background-position: center;
@@ -257,6 +257,7 @@ position: relative;
   text-align: center;
   width: 60%;
   
+  
 
   
 }
@@ -269,7 +270,7 @@ float: left;
 left: 2.5%;
 top: 5%;
 padding: 15px;
-  
+height: 70%;  
 }
 
 .trailer a img:hover{  

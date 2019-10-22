@@ -1,36 +1,44 @@
-<?php
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+       <?php
 $servername = "localhost";
 $username = "root";
-$password = "Lannister123";
-
-unm=$_post['uname'];
-pw=$_post['pwd'];
-
+$password = "";
+$database="register";
+$email=$_POST["email"];
+$pw=$_POST["pwd"];
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
-
+$conn = mysqli_connect($servername, $username, $password,$database);
 // Check connection
 if ($conn) {
-    mysql_select_db("mydb",$conn);
-    
-$result = mysql_query("SELECT * FROM login");
-while($row=mysql_fetch_array($result))
+   
+    $sql="Select *from register;";
+$result = mysqli_query($conn, $sql);
+while($row=mysqli_fetch_array($result))
 {
-$user=$row['username'];
+$user=$row['email'];
 $pass=$row['password'];
 }
-$num=mysql_num_rows($result);echo $num;
+$num=mysqli_num_rows($result);echo $user. "<br>";
 for($i=1;$i<=$num; $i++){
-
-if($unm == $user && $pw==$pass)
+if($email == $user && $pw==$pass)
 {
-echo "welcome";
+echo "<script type='text/javascript'>alert('login successfull!')</script>";
+header( "refresh:0; url=home.html");
 }
 else
 {
-echo("Please Enter Correct Username and Password ...");
+echo "<script type='text/javascript'>alert('incorrect username or password!')</script>";
+header( "refresh:0; url=login.html");
 }
 }
-}
-echo "Connected successfully";
+}else
+echo "Connection failed";
 ?>
+
+    </body>
+</html>
