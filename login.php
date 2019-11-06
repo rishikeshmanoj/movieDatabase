@@ -15,27 +15,27 @@ $pw=$_POST["pwd"];
 $conn = mysqli_connect($servername, $username, $password,$database);
 // Check connection
 if ($conn) {
-   
-    $sql="Select *from register;";
+       
+$sql="Select *from register where email='$email' and password='$pw';";
 $result = mysqli_query($conn, $sql);
+
 while($row=mysqli_fetch_array($result))
 {
+
 $user=$row['email'];
 $pass=$row['password'];
-}
-$num=mysqli_num_rows($result);echo $user. "<br>";
-for($i=1;$i<=$num; $i++){
-if($email == $user && $pw==$pass)
+if($user==$email && $pass== $pw)
 {
 echo "<script type='text/javascript'>alert('login successfull!')</script>";
-header( "refresh:0; url=home.html");
+header( "refresh:0; url=dash_home.html");break;
 }
 else
 {
 echo "<script type='text/javascript'>alert('incorrect username or password!')</script>";
-header( "refresh:0; url=login.html");
+break;
 }
 }
+
 }else
 echo "Connection failed";
 ?>
